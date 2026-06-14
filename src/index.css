@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg: #111210;
+  --panel: #191816;
+  --elevated: #222019;
+  --border: #2e2c29;
+  --border-soft: rgba(255,255,255,0.05);
+  --text: #f0ede8;
+  --dim: #8c8680;
+  --sage: #7eb8a0;
+  --sage-dim: rgba(126,184,160,0.12);
+  --sand: #c4a882;
+  --sand-dim: rgba(196,168,130,0.12);
+  --alert: #e07a6b;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Geist", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+}
+
+button { transition: transform 0.12s ease, opacity 0.12s ease; }
+button:active { transform: scale(0.96); opacity: 0.88; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
